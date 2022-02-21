@@ -49,6 +49,26 @@ router.get("/getPhotoshoots", (req, res) => {
       .catch((err) => console.log(err));
 });
 
+//delete photoshoot
+router.delete("/photoshoot/:photoshootId", (req, res) => {
+   const photoshoot = db.doc(`/photoshoots/${req.params.photoshootId}`);
+
+   photoshoot
+      .get()
+      .then((doc) => {
+         if (doc.exists) {
+            photoshoot.delete();
+            return res.json({ message: "Photoshoot deleted successfully." });
+         } else {
+            return res.json({ error: "Photoshoot not found." });
+         }
+      })
+      .catch((err) => {
+         console.log(err);
+         return res.status(500).json({ error: err.code });
+      });
+});
+
 //book studio
 router.post("/studio", (req, res) => {
    const booking = {
@@ -92,6 +112,26 @@ router.get("/getStudioBookings", (req, res) => {
          return res.json(bookings);
       })
       .catch((err) => console.log(err));
+});
+
+//delete studio booking
+router.delete("/studio/:bookingId", (req, res) => {
+   const booking = db.doc(`/studio/${req.params.bookingId}`);
+
+   booking
+      .get()
+      .then((doc) => {
+         if (doc.exists) {
+            booking.delete();
+            return res.json({ message: "Booking deleted successfully." });
+         } else {
+            return res.json({ error: "Booking not found." });
+         }
+      })
+      .catch((err) => {
+         console.log(err);
+         return res.status(500).json({ error: err.code });
+      });
 });
 
 module.exports = router;
