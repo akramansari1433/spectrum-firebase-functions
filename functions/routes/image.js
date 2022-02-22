@@ -61,6 +61,10 @@ router.post("/uploadWedding", (req, res) => {
    uploadImage(req, res, "wedding");
 });
 
+router.post("/uploadPreWedding", (req, res) => {
+   uploadImage(req, res, "prewedding");
+});
+
 router.post("/uploadFashion&Portrait", (req, res) => {
    uploadImage(req, res, "fashion&portrait");
 });
