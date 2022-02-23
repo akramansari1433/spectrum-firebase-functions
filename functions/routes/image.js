@@ -77,4 +77,89 @@ router.post("/uploadProduct", (req, res) => {
    uploadImage(req, res, "product");
 });
 
+//get wedding images
+router.get("/getWeddings", (req, res) => {
+   db.collection("wedding")
+      .get()
+      .then((data) => {
+         let images = [];
+         data.forEach((doc) => {
+            images.push({
+               imageId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(images);
+      })
+      .catch((err) => console.log(err));
+});
+
+//get pre-wedding images
+router.get("/getPreWeddings", (req, res) => {
+   db.collection("prewedding")
+      .get()
+      .then((data) => {
+         let images = [];
+         data.forEach((doc) => {
+            images.push({
+               imageId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(images);
+      })
+      .catch((err) => console.log(err));
+});
+
+//get fashion&portrait images
+router.get("/getfashion&portraits", (req, res) => {
+   db.collection("fashion&portrait")
+      .get()
+      .then((data) => {
+         let images = [];
+         data.forEach((doc) => {
+            images.push({
+               imageId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(images);
+      })
+      .catch((err) => console.log(err));
+});
+
+//get babyt images
+router.get("/getbabies", (req, res) => {
+   db.collection("baby")
+      .get()
+      .then((data) => {
+         let images = [];
+         data.forEach((doc) => {
+            images.push({
+               imageId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(images);
+      })
+      .catch((err) => console.log(err));
+});
+
+//get product images
+router.get("/getProducts", (req, res) => {
+   db.collection("product")
+      .get()
+      .then((data) => {
+         let images = [];
+         data.forEach((doc) => {
+            images.push({
+               imageId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(images);
+      })
+      .catch((err) => console.log(err));
+});
+
 module.exports = router;
