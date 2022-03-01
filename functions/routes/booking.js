@@ -93,6 +93,7 @@ router.post("/studio", (req, res) => {
                .set(booking)
                .then(() => {
                   res.json({ message: "Studio booked successfully" });
+                  sendMail(booking);
                });
          }
       });
