@@ -1,5 +1,6 @@
 const express = require("express");
 const { db } = require("../utils/admin");
+const { sendMail } = require("../utils/sendEmail");
 
 const router = express.Router();
 
@@ -26,6 +27,7 @@ router.post("/photoshoot", (req, res) => {
                .set(photoshoot)
                .then(() => {
                   res.json({ message: "Photoshoot booked successfully" });
+                  sendMail(photoshoot);
                });
          }
       });
