@@ -4,6 +4,21 @@ const { sendMail } = require("../utils/sendEmail");
 
 const router = express.Router();
 
+//photoshoot availability check
+router.get("/photoshootAvailability/:date", (req, res) => {
+   db.doc(`/photoshoots/${req.params.date.split("-").join("")}`)
+      .get()
+      .then((doc) => {
+         if (doc.exists) {
+            return res
+               .status(400)
+               .json({ error: "This date is already booked." });
+         } else {
+            return res.json({ message: "Date Available." });
+         }
+      });
+});
+
 //book photoshoot
 router.post("/photoshoot", (req, res) => {
    const photoshoot = {
@@ -12,24 +27,16 @@ router.post("/photoshoot", (req, res) => {
       phone: req.body.phone,
       date: req.body.date,
       category: req.body.category,
+      paymentId: req.body.paymentId,
+      amount: req.body.amount,
    };
 
-   db.doc(`/photoshoots/${photoshoot.date.split("-").join("")}`)
-      .get()
-      .then((doc) => {
-         if (doc.exists) {
-            return res
-               .status(400)
-               .json({ error: "This date is already booked." });
-         } else {
-            db.collection("photoshoots")
-               .doc(photoshoot.date.split("-").join(""))
-               .set(photoshoot)
-               .then(() => {
-                  res.json({ message: "Photoshoot booked successfully" });
-                  sendMail(photoshoot);
-               });
-         }
+   db.collection("photoshoots")
+      .doc(photoshoot.date.split("-").join(""))
+      .set(photoshoot)
+      .then(() => {
+         res.json({ message: "Photoshoot booked successfully" });
+         sendMail(photoshoot);
       });
 });
 
@@ -71,16 +78,9 @@ router.delete("/photoshoot/:photoshootId", (req, res) => {
       });
 });
 
-//book studio
-router.post("/studio", (req, res) => {
-   const booking = {
-      name: req.body.name,
-      email: req.body.email,
-      phone: req.body.phone,
-      date: req.body.date,
-   };
-
-   db.doc(`/studio/${booking.date.split("-").join("")}`)
+//photoshoot availability check
+router.get("/studioAvailability/:date", (req, res) => {
+   db.doc(`/studio/${req.params.date.split("-").join("")}`)
       .get()
       .then((doc) => {
          if (doc.exists) {
@@ -88,14 +88,28 @@ router.post("/studio", (req, res) => {
                .status(400)
                .json({ error: "This date is already booked." });
          } else {
-            db.collection("studio")
-               .doc(booking.date.split("-").join(""))
-               .set(booking)
-               .then(() => {
-                  res.json({ message: "Studio booked successfully" });
-                  sendMail(booking);
-               });
+            return res.json({ message: "Date Available." });
          }
+      });
+});
+
+//book studio
+router.post("/studio", (req, res) => {
+   const booking = {
+      name: req.body.name,
+      email: req.body.email,
+      phone: req.body.phone,
+      date: req.body.date,
+      paymentId: req.body.paymentId,
+      amount: req.body.amount,
+   };
+
+   db.collection("studio")
+      .doc(booking.date.split("-").join(""))
+      .set(booking)
+      .then(() => {
+         res.json({ message: "Studio booked successfully" });
+         sendMail(booking);
       });
 });
 

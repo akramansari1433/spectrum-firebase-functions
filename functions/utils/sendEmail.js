@@ -25,6 +25,8 @@ const sendMail = (data) => {
               <li>Phone: ${data.phone}</li>
               <li>Date: ${data.date}</li>
               <li>Category: ${data.category}</li>
+              <li>PaymentId: ${data.paymentId}</li>
+              <li>Amount Paid: ${data.amount}</li>
           </ul>`,
       };
    } else {
@@ -41,6 +43,8 @@ const sendMail = (data) => {
              <li>Email: ${data.email}</li>
              <li>Phone: ${data.phone}</li>
              <li>Date: ${data.date}</li>
+             <li>PaymentId: ${data.paymentId}</li>
+            <li>Amount Paid: ${data.amount}</li>
          </ul>`,
       };
    }
