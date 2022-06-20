@@ -5,7 +5,7 @@ const sendMail = (data) => {
       service: "gmail",
       auth: {
          user: "spectrumphotographyandfilms@gmail.com",
-         pass: "Spectrum@123",
+         pass: "gvsimyzxvizxrfqw",
       },
    });
 
