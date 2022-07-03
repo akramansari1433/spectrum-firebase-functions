@@ -4,7 +4,7 @@ const { sendMail } = require("../utils/sendEmail");
 
 const router = express.Router();
 
-//book photoshoot
+//book product
 router.post("/", (req, res) => {
    const rentDetail = {
       name: req.body.name,
@@ -12,7 +12,7 @@ router.post("/", (req, res) => {
       phone: req.body.phone,
       date: req.body.date,
       days: req.body.days,
-      equipment: req.body.equipment,
+      product: req.body.product,
       paymentId: req.body.paymentId,
       amount: req.body.amount,
    };
@@ -31,7 +31,7 @@ router.post("/", (req, res) => {
           <li>Phone: ${rentDetail.phone}</li>
           <li>Date: ${rentDetail.date}</li>
           <li>Days: ${rentDetail.days}</li>
-          <li>Product: ${rentDetail.equipment}</li>
+          <li>Product: ${rentDetail.product}</li>
           <li>PaymentId: ${rentDetail.paymentId}</li>
          <li>Amount Paid:${rentDetail.amount}</li>
       </ul>`,

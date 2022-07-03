@@ -4,7 +4,7 @@ const { admin, db } = require("../utils/admin");
 
 const router = express.Router();
 
-//add equipments
+//add products
 router.post("/add", (req, res) => {
    const BusBoy = require("busboy");
    const path = require("path");
@@ -59,14 +59,14 @@ router.post("/add", (req, res) => {
          })
          .then(() => {
             const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${config.storageBucket}/o/${imageFileName}?alt=media`;
-            const equipment = {
+            const product = {
                ...formData,
                imageUrl,
             };
-            return db.collection("equipment").add(equipment);
+            return db.collection("product").add(product);
          })
          .then(() => {
-            return res.json({ message: "Equipment added successfully!" });
+            return res.json({ message: "Product added successfully!" });
          })
          .catch((err) => {
             console.log(err);
@@ -76,35 +76,35 @@ router.post("/add", (req, res) => {
    busboy.end(req.rawBody);
 });
 
-//get all equipment
-router.get("/getEquipments", (req, res) => {
-   db.collection("equipment")
+//get all products
+router.get("/getProducts", (req, res) => {
+   db.collection("product")
       .get()
       .then((data) => {
-         let equipments = [];
+         let products = [];
          data.forEach((doc) => {
-            equipments.push({
-               equipmentId: doc.id,
+            products.push({
+               productId: doc.id,
                ...doc.data(),
             });
          });
-         return res.json(equipments);
+         return res.json(products);
       })
       .catch((err) => console.log(err));
 });
 
 //delete equipment
-router.delete("/:equipmentId", (req, res) => {
-   const equipment = db.doc(`/equipment/${req.params.equipmentId}`);
+router.delete("/:productId", (req, res) => {
+   const product = db.doc(`/product/${req.params.productId}`);
 
-   equipment
+   product
       .get()
       .then((doc) => {
          if (doc.exists) {
-            equipment.delete();
-            return res.json({ message: "Equipment deleted successfully." });
+            product.delete();
+            return res.json({ message: "Product deleted successfully." });
          } else {
-            return res.json({ error: "Equipment not found." });
+            return res.json({ error: "Product not found." });
          }
       })
       .catch((err) => {
@@ -114,10 +114,10 @@ router.delete("/:equipmentId", (req, res) => {
 });
 
 //update availability
-router.post("/updateAvailabilty/:equipmentId", (req, res) => {
-   const equipment = db.doc(`/equipment/${req.params.equipmentId}`);
+router.post("/updateAvailabilty/:productId", (req, res) => {
+   const product = db.doc(`/product/${req.params.productId}`);
 
-   equipment
+   product
       .update({ available: req.body.available })
       .then(() => {
          return res.json({ message: "Updated successfully!" });
