@@ -5,6 +5,7 @@ const imageRoute = require("./routes/image");
 const bookingRoute = require("./routes/booking");
 const feedbackRoute = require("./routes/feedback");
 const adminRoute = require("./routes/admin");
+const equipmentRoute = require("./routes/equipment");
 
 const app = express();
 
@@ -15,6 +16,8 @@ app.use("/image", imageRoute);
 app.use("/booking", bookingRoute);
 
 app.use("/feedback", feedbackRoute);
+
+app.use("/equipment", equipmentRoute);
 
 app.use("/admin", adminRoute);
 
