@@ -4,6 +4,7 @@ const { admin, db } = require("../utils/admin");
 
 const router = express.Router();
 
+//add equipments
 router.post("/add", (req, res) => {
    const BusBoy = require("busboy");
    const path = require("path");
@@ -65,7 +66,7 @@ router.post("/add", (req, res) => {
             return db.collection("equipment").add(equipment);
          })
          .then(() => {
-            return res.json({ message: "Image uploaded successfully!" });
+            return res.json({ message: "Equipment added successfully!" });
          })
          .catch((err) => {
             console.log(err);
@@ -73,6 +74,58 @@ router.post("/add", (req, res) => {
          });
    });
    busboy.end(req.rawBody);
+});
+
+//get all equipment
+router.get("/getEquipments", (req, res) => {
+   db.collection("equipment")
+      .get()
+      .then((data) => {
+         let equipments = [];
+         data.forEach((doc) => {
+            equipments.push({
+               equipmentId: doc.id,
+               ...doc.data(),
+            });
+         });
+         return res.json(equipments);
+      })
+      .catch((err) => console.log(err));
+});
+
+//delete equipment
+router.delete("/:equipmentId", (req, res) => {
+   const equipment = db.doc(`/equipment/${req.params.equipmentId}`);
+
+   equipment
+      .get()
+      .then((doc) => {
+         if (doc.exists) {
+            equipment.delete();
+            return res.json({ message: "Equipment deleted successfully." });
+         } else {
+            return res.json({ error: "Equipment not found." });
+         }
+      })
+      .catch((err) => {
+         console.log(err);
+         return res.status(500).json({ error: err.code });
+      });
+});
+
+//update availability
+router.post("/updateAvailabilty/:equipmentId", (req, res) => {
+   const equipment = db.doc(`/equipment/${req.params.equipmentId}`);
+
+   equipment
+      .update({ available: req.body.available })
+      .then(() => {
+         return res.json({ message: "Updated successfully!" });
+      })
+      .catch((err) => {
+         console.log(err);
+         return res.status(500).json({ error: err.code });
+      });
 });
 
 module.exports = router;
