@@ -1,6 +1,6 @@
 var nodemailer = require("nodemailer");
 
-const sendMail = (data) => {
+const sendMail = (mailOptions) => {
    var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -8,46 +8,6 @@ const sendMail = (data) => {
          pass: "gvsimyzxvizxrfqw",
       },
    });
-
-   var mailOptions = {};
-   if (data.category) {
-      mailOptions = {
-         from: "spectrumphotographyandfilms@gmail.com",
-         to: data.email,
-         subject: "Booking Successfull!",
-         html: `
-          <div style="padding:10px;border-style: ridge">
-          <h3>Your Photoshoot Booking was successfull.</h3>
-          <p>Booking Details:</p>
-          <ul>
-              <li>Name: ${data.name}</li>
-              <li>Email: ${data.email}</li>
-              <li>Phone: ${data.phone}</li>
-              <li>Date: ${data.date}</li>
-              <li>Category: ${data.category}</li>
-              <li>PaymentId: ${data.paymentId}</li>
-              <li>Amount Paid: ${data.amount}</li>
-          </ul>`,
-      };
-   } else {
-      mailOptions = {
-         from: "spectrumphotographyandfilms@gmail.com",
-         to: data.email,
-         subject: "Booking Successfull!",
-         html: `
-         <div style="padding:10px;border-style: ridge">
-         <h3>Your Studio Booking was successfull.</h3>
-         <p>Booking Details:</p>
-         <ul>
-             <li>Name: ${data.name}</li>
-             <li>Email: ${data.email}</li>
-             <li>Phone: ${data.phone}</li>
-             <li>Date: ${data.date}</li>
-             <li>PaymentId: ${data.paymentId}</li>
-            <li>Amount Paid: ${data.amount}</li>
-         </ul>`,
-      };
-   }
 
    transporter.sendMail(mailOptions, function (error, info) {
       if (error) {

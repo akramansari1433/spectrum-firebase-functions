@@ -17,11 +17,31 @@ router.post("/", (req, res) => {
       amount: req.body.amount,
    };
 
+   const mailOptions = {
+      from: "spectrumphotographyandfilms@gmail.com",
+      to: rentDetail.email,
+      subject: "Product Booked Successfull!",
+      html: `
+      <div style="padding:10px;border-style: ridge">
+      <h3>Your Studio Booking was successfull.</h3>
+      <p>Booking Details:</p>
+      <ul>
+          <li>Name: ${rentDetail.name}</li>
+          <li>Email: ${rentDetail.email}</li>
+          <li>Phone: ${rentDetail.phone}</li>
+          <li>Date: ${rentDetail.date}</li>
+          <li>Days: ${rentDetail.days}</li>
+          <li>Product: ${rentDetail.equipment}</li>
+          <li>PaymentId: ${rentDetail.paymentId}</li>
+         <li>Amount Paid:${rentDetail.amount}</li>
+      </ul>`,
+   };
+
    db.collection("rent")
       .add(rentDetail)
       .then(() => {
          res.json({ message: "Product booked successfully" });
-         sendMail(rentDetail);
+         sendMail(mailOptions);
       })
       .catch((err) => {
          console.log(err);

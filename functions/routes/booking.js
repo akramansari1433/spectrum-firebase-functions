@@ -31,12 +31,31 @@ router.post("/photoshoot", (req, res) => {
       amount: req.body.amount,
    };
 
+   const mailOptions = {
+      from: "spectrumphotographyandfilms@gmail.com",
+      to: photoshoot.email,
+      subject: "Booking Successfull!",
+      html: `
+          <div style="padding:10px;border-style: ridge">
+          <h3>Your Photoshoot Booking was successfull.</h3>
+          <p>Booking Details:</p>
+          <ul>
+              <li>Name: ${photoshoot.name}</li>
+              <li>Email: ${photoshoot.email}</li>
+              <li>Phone: ${photoshoot.phone}</li>
+              <li>Date: ${photoshoot.date}</li>
+              <li>Category: ${photoshoot.category}</li>
+              <li>PaymentId: ${photoshoot.paymentId}</li>
+              <li>Amount Paid: ${photoshoot.amount}</li>
+          </ul>`,
+   };
+
    db.collection("photoshoots")
       .doc(photoshoot.date.split("-").join(""))
       .set(photoshoot)
       .then(() => {
          res.json({ message: "Photoshoot booked successfully" });
-         sendMail(photoshoot);
+         sendMail(mailOptions);
       });
 });
 
@@ -104,12 +123,30 @@ router.post("/studio", (req, res) => {
       amount: req.body.amount,
    };
 
+   const mailOptions = {
+      from: "spectrumphotographyandfilms@gmail.com",
+      to: booking.email,
+      subject: "Booking Successfull!",
+      html: `
+            <div style="padding:10px;border-style: ridge">
+            <h3>Your Studio Booking was successfull.</h3>
+            <p>Booking Details:</p>
+            <ul>
+                <li>Name: ${booking.name}</li>
+                <li>Email: ${booking.email}</li>
+                <li>Phone: ${booking.phone}</li>
+                <li>Date: ${booking.date}</li>
+                <li>PaymentId: ${booking.paymentId}</li>
+               <li>Amount Paid: ${booking.amount}</li>
+            </ul>`,
+   };
+
    db.collection("studio")
       .doc(booking.date.split("-").join(""))
       .set(booking)
       .then(() => {
          res.json({ message: "Studio booked successfully" });
-         sendMail(booking);
+         sendMail(mailOptions);
       });
 });
 
