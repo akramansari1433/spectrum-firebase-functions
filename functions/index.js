@@ -6,6 +6,7 @@ const bookingRoute = require("./routes/booking");
 const feedbackRoute = require("./routes/feedback");
 const adminRoute = require("./routes/admin");
 const equipmentRoute = require("./routes/equipment");
+const rentRoute = require("./routes/rent");
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.use("/booking", bookingRoute);
 app.use("/feedback", feedbackRoute);
 
 app.use("/equipment", equipmentRoute);
+
+app.use("/rent", rentRoute);
 
 app.use("/admin", adminRoute);
 
