@@ -271,3 +271,260 @@
 [info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
 [debug] [2022-08-29T02:52:19.838Z] [worker-asia-south1-api-0e2f2f75-7c19-49d0-961f-70e3ef43de8f]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-0e2f2f75-7c19-49d0-961f-70e3ef43de8f]: IDLE"}}
 [debug] [2022-08-29T02:52:19.838Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-08-29T06:26:33.168Z] ----------------------------------------------------------------------
+[debug] [2022-08-29T06:26:33.170Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve -p 5001
+[debug] [2022-08-29T06:26:33.170Z] CLI Version:   11.1.0
+[debug] [2022-08-29T06:26:33.171Z] Platform:      darwin
+[debug] [2022-08-29T06:26:33.171Z] Node Version:  v16.14.0
+[debug] [2022-08-29T06:26:33.175Z] Time:          Mon Aug 29 2022 11:56:33 GMT+0530 (India Standard Time)
+[debug] [2022-08-29T06:26:33.175Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-29T06:26:33.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-29T06:26:33.289Z] > authorizing via signed-in user (akramansari1433@gmail.com)
+[debug] [2022-08-29T06:26:33.291Z] [iam] checking project spectrum-42da3 for permissions ["firebase.projects.get"]
+[debug] [2022-08-29T06:26:33.293Z] > refreshing access token with scopes: []
+[debug] [2022-08-29T06:26:33.296Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-08-29T06:26:33.297Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-29T06:26:33.582Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-08-29T06:26:33.584Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-08-29T06:26:33.629Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions [none]
+[debug] [2022-08-29T06:26:33.629Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-08-29T06:26:35.199Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions 200
+[debug] [2022-08-29T06:26:35.199Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-08-29T06:26:35.201Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 [none]
+[debug] [2022-08-29T06:26:35.902Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 200
+[debug] [2022-08-29T06:26:35.902Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 {"projectId":"spectrum-42da3","projectNumber":"871860573198","displayName":"spectrum","name":"projects/spectrum-42da3","resources":{"hostingSite":"spectrum-42da3","storageBucket":"spectrum-42da3.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_c03ee026-e83f-4e61-9955-86e3177ec7e4"}
+[info] 
+[info] === Serving from '/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions'...
+[info] 
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-08-29T06:26:35.942Z] defaultcredentials: writing to file /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json
+[debug] [2022-08-29T06:26:35.945Z] Setting GAC to /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json"}}
+[debug] [2022-08-29T06:26:35.947Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig [none]
+[debug] [2022-08-29T06:26:36.389Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig 200
+[debug] [2022-08-29T06:26:36.390Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig {"projectId":"spectrum-42da3","storageBucket":"spectrum-42da3.appspot.com","locationId":"asia-south1"}
+[info] i  functions: Watching "/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions\" for Cloud Functions..."}}
+[debug] [2022-08-29T06:26:36.429Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-08-29T06:26:39.231Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "firebase-functions": "^3.18.1",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-08-29T06:26:39.231Z] Building nodejs source
+[debug] [2022-08-29T06:26:39.231Z] Analyzing nodejs backend spec
+[warn] ⚠  functions: You are using an old version of firebase-functions SDK (3.18.1). Please update firebase-functions SDK to >=3.20.0 
+[info] ✔  functions[asia-south1-api]: http function initialized (http://localhost:5001/spectrum-42da3/asia-south1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/spectrum-42da3/asia-south1/api)."}}
+[debug] [2022-09-01T06:44:49.172Z] ----------------------------------------------------------------------
+[debug] [2022-09-01T06:44:49.174Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve -p 5001
+[debug] [2022-09-01T06:44:49.174Z] CLI Version:   11.1.0
+[debug] [2022-09-01T06:44:49.175Z] Platform:      darwin
+[debug] [2022-09-01T06:44:49.175Z] Node Version:  v16.14.0
+[debug] [2022-09-01T06:44:49.180Z] Time:          Thu Sep 01 2022 12:14:49 GMT+0530 (India Standard Time)
+[debug] [2022-09-01T06:44:49.180Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-01T06:44:49.185Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2022-09-01T06:44:49.282Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-01T06:44:49.283Z] > authorizing via signed-in user (akramansari1433@gmail.com)
+[debug] [2022-09-01T06:44:49.283Z] [iam] checking project spectrum-42da3 for permissions ["firebase.projects.get"]
+[debug] [2022-09-01T06:44:49.285Z] > refreshing access token with scopes: []
+[debug] [2022-09-01T06:44:49.286Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-09-01T06:44:49.286Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-01T06:44:49.551Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-09-01T06:44:49.555Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-09-01T06:44:49.606Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions [none]
+[debug] [2022-09-01T06:44:49.607Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-09-01T06:44:50.023Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2022-09-01T06:44:50.027Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2022-09-01T06:44:51.301Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions 200
+[debug] [2022-09-01T06:44:51.301Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/spectrum-42da3:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-09-01T06:44:51.304Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 [none]
+[debug] [2022-09-01T06:44:51.820Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 200
+[debug] [2022-09-01T06:44:51.820Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3 {"projectId":"spectrum-42da3","projectNumber":"871860573198","displayName":"spectrum","name":"projects/spectrum-42da3","resources":{"hostingSite":"spectrum-42da3","storageBucket":"spectrum-42da3.appspot.com","locationId":"asia-south1"},"state":"ACTIVE","etag":"1_c03ee026-e83f-4e61-9955-86e3177ec7e4"}
+[info] 
+[info] === Serving from '/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions'...
+[info] 
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-09-01T06:44:51.875Z] defaultcredentials: writing to file /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json
+[debug] [2022-09-01T06:44:51.878Z] Setting GAC to /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/akram/.config/firebase/akramansari1433_gmail_com_application_default_credentials.json"}}
+[debug] [2022-09-01T06:44:51.879Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig [none]
+[debug] [2022-09-01T06:44:52.423Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig 200
+[debug] [2022-09-01T06:44:52.423Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/spectrum-42da3/adminSdkConfig {"projectId":"spectrum-42da3","storageBucket":"spectrum-42da3.appspot.com","locationId":"asia-south1"}
+[info] i  functions: Watching "/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions\" for Cloud Functions..."}}
+[debug] [2022-09-01T06:44:52.471Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2022-09-01T06:44:53.912Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "firebase-functions": "^3.18.1",
+    "nodemailer": "^6.7.2"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-09-01T06:44:53.912Z] Building nodejs source
+[debug] [2022-09-01T06:44:53.912Z] Analyzing nodejs backend spec
+[warn] ⚠  functions: You are using an old version of firebase-functions SDK (3.18.1). Please update firebase-functions SDK to >=3.20.0 
+[info] ✔  functions[asia-south1-api]: http function initialized (http://localhost:5001/spectrum-42da3/asia-south1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/spectrum-42da3/asia-south1/api)."}}
+[debug] [2022-09-01T06:45:34.342Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:45:34.346Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:45:34.347Z] Accepted request GET /spectrum-42da3/asia-south1/api/favicon.ico --> asia-south1-api
+[debug] [2022-09-01T06:45:34.387Z] [worker-pool] addWorker(asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(asia-south1-api)"}}
+[debug] [2022-09-01T06:45:34.388Z] [worker-pool] Adding worker with key asia-south1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key asia-south1-api, total=1"}}
+[debug] [2022-09-01T06:45:34.388Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:45:34.389Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:45:34.389Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:45:35.340Z] [runtime-status] [6352] Functions runtime initialized. {"cwd":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Functions runtime initialized. {\"cwd\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-09-01T06:45:35.341Z] [runtime-status] [6352] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Disabled runtime features: undefined"}}
+[debug] [2022-09-01T06:45:35.343Z] [runtime-status] [6352] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.345Z] [runtime-status] [6352] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.345Z] [runtime-status] [6352] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-09-01T06:45:35.345Z] [runtime-status] [6352] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.374Z] [runtime-status] [6352] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-09-01T06:45:35.375Z] [runtime-status] [6352] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-09-01T06:45:35.376Z] [runtime-status] [6352] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.378Z] [runtime-status] [6352] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.379Z] [runtime-status] [6352] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.18.1","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.18.1\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-09-01T06:45:35.379Z] [runtime-status] [6352] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"/Users/akram/College/MCA/Mini-Project/spectrum-firebase-functions/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2022-09-01T06:45:35.436Z] [runtime-status] [6352] initializeApp(DEFAULT) {"storageBucket":"spectrum-42da3.appspot.com","projectId":"spectrum-42da3"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] initializeApp(DEFAULT) {\"storageBucket\":\"spectrum-42da3.appspot.com\",\"projectId\":\"spectrum-42da3\"}"}}
+[warn] ⚠  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2022-09-01T06:45:35.483Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:45:35.485Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:45:35.487Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:45:35.497Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:45:35.498Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/favicon.ico, mapping to path=/favicon.ico {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/favicon.ico, mapping to path=/favicon.ico"}}
+[debug] [2022-09-01T06:45:35.505Z] [runtime-status] [6352] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling GET request"}}
+[debug] [2022-09-01T06:45:35.511Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:45:35.512Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:45:35.513Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-01T06:45:55.539Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:45:55.540Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:45:55.540Z] Accepted request POST /spectrum-42da3/asia-south1/api/admin/login --> asia-south1-api
+[debug] [2022-09-01T06:45:55.541Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:45:55.541Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:45:55.541Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:45:55.546Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:45:55.548Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:45:55.551Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:45:55.557Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:45:55.558Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/admin/login, mapping to path=/admin/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/admin/login, mapping to path=/admin/login"}}
+[debug] [2022-09-01T06:45:55.593Z] [runtime-status] [6352] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling POST request"}}
+[debug] [2022-09-01T06:45:55.598Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[warn] ⚠  Google API requested!
+   - URL: "https://oauth2.googleapis.com/token"
+   - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Google API requested!\n   - URL: \"https://oauth2.googleapis.com/token\"\n   - Be careful, this may be a production service."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:45:56.615Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:45:56.615Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-01T06:47:05.974Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:47:05.977Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:47:05.977Z] Accepted request GET /spectrum-42da3/asia-south1/api/image/getWeddings --> asia-south1-api
+[debug] [2022-09-01T06:47:05.977Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:47:05.978Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:47:05.978Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:47:05.981Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:47:05.983Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:47:05.985Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:47:05.992Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:47:05.993Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/image/getWeddings, mapping to path=/image/getWeddings {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/image/getWeddings, mapping to path=/image/getWeddings"}}
+[debug] [2022-09-01T06:47:05.999Z] [runtime-status] [6352] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling GET request"}}
+[debug] [2022-09-01T06:47:06.002Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:47:06.212Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:47:06.212Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-01T06:49:11.213Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:49:11.215Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:49:11.215Z] Accepted request GET /spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02 --> asia-south1-api
+[debug] [2022-09-01T06:49:11.216Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:49:11.217Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:49:11.217Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:49:11.221Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:49:11.226Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:49:11.230Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:49:11.237Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:49:11.237Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02, mapping to path=/booking/photoshootAvailability/2022-09-02 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02, mapping to path=/booking/photoshootAvailability/2022-09-02"}}
+[debug] [2022-09-01T06:49:11.248Z] [runtime-status] [6352] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling GET request"}}
+[debug] [2022-09-01T06:49:11.254Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:49:11.409Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:49:11.410Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-09-01T06:49:24.995Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:49:24.996Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:49:24.996Z] Accepted request POST /spectrum-42da3/asia-south1/api/booking/photoshoot --> asia-south1-api
+[debug] [2022-09-01T06:49:24.997Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:49:24.998Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:49:24.998Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:49:25.000Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:49:25.003Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:49:25.005Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:49:25.016Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:49:25.017Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshoot, mapping to path=/booking/photoshoot {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshoot, mapping to path=/booking/photoshoot"}}
+[debug] [2022-09-01T06:49:25.025Z] [runtime-status] [6352] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling POST request"}}
+[debug] [2022-09-01T06:49:25.039Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:49:25.249Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:49:25.249Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  Email sent: 250 2.0.0 OK  1662014969 x2-20020a170902ec8200b0017514e59ab9sm5173740plg.264 - gsmtp {"user":"Email sent: 250 2.0.0 OK  1662014969 x2-20020a170902ec8200b0017514e59ab9sm5173740plg.264 - gsmtp","metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"\u001b[90m> \u001b[39m Email sent: 250 2.0.0 OK  1662014969 x2-20020a170902ec8200b0017514e59ab9sm5173740plg.264 - gsmtp"}}
+[debug] [2022-09-01T06:50:56.092Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-09-01T06:50:56.094Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-09-01T06:50:56.094Z] Accepted request GET /spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02 --> asia-south1-api
+[debug] [2022-09-01T06:50:56.095Z] [worker-pool] submitWork(triggerId=asia-south1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=asia-south1-api)"}}
+[debug] [2022-09-01T06:50:56.095Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: Assigning socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:50:56.095Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: BUSY"}}
+[debug] [2022-09-01T06:50:56.097Z] [runtime-status] [6352] Beginning invocation function api! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Beginning invocation function api!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Beginning execution of \"api\""}}
+[debug] [2022-09-01T06:50:56.098Z] [runtime-status] [6352] Running api in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Running api in signature http"}}
+[debug] [2022-09-01T06:50:56.099Z] [runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Attempting to listen to socketPath: /var/folders/zk/180_njs15vj33jcwpz54qgfr0000gn/T/fire_emu_6352.sock"}}
+[debug] [2022-09-01T06:50:56.106Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-09-01T06:50:56.106Z] [functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02, mapping to path=/booking/photoshootAvailability/2022-09-02 {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/spectrum-42da3/asia-south1/api/booking/photoshootAvailability/2022-09-02, mapping to path=/booking/photoshootAvailability/2022-09-02"}}
+[debug] [2022-09-01T06:50:56.112Z] [runtime-status] [6352] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server handling GET request"}}
+[debug] [2022-09-01T06:50:56.115Z] [runtime-status] [6352] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"[runtime-status] [6352] Ephemeral server survived."}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"asia-south1-api"},"extension":{},"message":"Finished \"api\" in ~1s"}}
+[debug] [2022-09-01T06:50:56.243Z] [worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-asia-south1-api-c3029c73-eecb-4d70-8aa2-a59a24f6ec14]: IDLE"}}
+[debug] [2022-09-01T06:50:56.243Z] [work-queue] {"queueLength":0,"workRunningCount":0}
